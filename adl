@@ -1,0 +1,2 @@
+#!/bin/sh
+rclone copy -P gdrive:temp/$1 $1
