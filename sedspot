@@ -3,7 +3,6 @@
 cd ~/Music/sed/
 
 declare -A playlists
-
 playlists["Electro"]="https://open.spotify.com/playlist/4B5nm6Bb7L2oX1J8ZlVFMI"
 playlists["Phonk"]="https://open.spotify.com/playlist/6mvzxlWWWVu5VA24IbqJvA"
 playlists["R&B"]="https://open.spotify.com/playlist/3yInbP2vA4QoTMRjS6gWwl"
