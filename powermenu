@@ -9,11 +9,12 @@ shutdown="shutdown"
 reboot="reboot"
 lock="lock"
 suspend="suspend"
+hibernate="hibernate"
 logout="logout"
 game="game"
 
 # variable passed to rofi
-options="$lock\n$logout\n$shutdown\n$suspend\n$reboot\n$game"
+options="$lock\n$logout\n$shutdown\n$suspend\n$hibernate\n$reboot\n$game"
 
 chosen="$(echo -e "$options" | $rofi_command -p "神  $uptime:" -dmenu)"
 case $chosen in
@@ -29,6 +30,9 @@ case $chosen in
     $suspend)
         # amixer set Master mute
         systemctl suspend
+        ;;
+    $hibernate)
+        systemctl hibernate
         ;;
     $logout)
         qtile cmd-obj -o cmd -f shutdown
