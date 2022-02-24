@@ -1,5 +1,8 @@
 #!/bin/bash
 git clone --bare https://github.com/s3dman/dotfiles.git $HOME/.cfg
+cd $HOME/.cfg
+git submodule init
+git submodule update
 
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
