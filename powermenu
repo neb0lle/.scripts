@@ -24,7 +24,7 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        light-locker-command -l
+		~/.scripts/lockscreen
         ;;
     $suspend)
         # amixer set Master mute
