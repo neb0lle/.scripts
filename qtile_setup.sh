@@ -11,7 +11,6 @@ sudo systemctl enable bluetooth.service
 
 sudo cp -r ~/.config/misc_configs/etc/* /etc/
 sudo cp -r ~/.config/misc_configs/usr/* /usr/
-sudo cp ~/Pictures/Wallpapers/wallpaper.png /usr/share/backgrounds/
 
 sudo lxappearance
 lxappearance
