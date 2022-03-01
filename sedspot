@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/Music/sed/
+cd ~/Music/SpotDL/
 
 declare -A playlists
 playlists["Electro"]="https://open.spotify.com/playlist/4B5nm6Bb7L2oX1J8ZlVFMI"
