@@ -1,0 +1,12 @@
+#!/bin/bash
+notify-send "Inverting" "$1"
+gs -o inv_$1    \
+   -sDEVICE=pdfwrite  \
+   -c "{1 exch sub}{1 exch sub}{1 exch sub}{1 exch sub} setcolortransfer" \
+   -f $1
+if [ $? -eq 0 ]
+then
+   notify-send "Inversion Completed" "inv_$1"
+else
+   notify-send "Inversion Failed" "inv_$1"
+fi
