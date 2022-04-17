@@ -1,2 +1,5 @@
-#!/bin/sh
-rclone copy -P gdrive:temp/$1 $1
+#!/bin/bash
+JSON="$(rclone lsjson gdrive:temp/ | jq ".[].Name")"
+NAME="$(echo "$JSON" | fzf)"
+PNAME=$(echo $NAME | cut -d "]" -f2 | cut -d "[" -f1 | awk '{$1=$1};1')
+echo "rclone copy -P gdrive:temp/$NAME" ./\"$PNAME\" | $SHELL
