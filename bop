@@ -1,8 +1,0 @@
-#!/bin/sh
-if [ $# -eq 0 ]; then
-	open -na Brave\ Browser "$(fzf)"
-	# open -a NightPDF "$(fzf)"
-else
-    open -na Brave\ Browser "$1"
-	# open -a NightPDF "$1"
-fi
