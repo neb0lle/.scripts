@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo pacman -S xorg kitty pipewire pipewire-pulse pipewire-alsa qtile xwallpaper mate-polkit sxhkd network-manager-applet dunst flameshot pulsemixer htop bashtop rofi rofi-calc zsh fzf starship neovim tmux python-iwlib python-psutil playerctl xorg-xbacklight ranger xclip nemo neofetch the_silver_searcher zsh-syntax-highlighting zsh-completions udiskie lxappearance gsfonts xsecurelock bluez bluez-utils pulseaudio-bluetooth blueman
-yay -S picom-jonaburg-git rofi-greenclip nerd-fonts-jetbrains-mono ly
+yay -S picom-jonaburg-git rofi-greenclip nerd-fonts-jetbrains-mono ly brave-bin
 
 chsh -s /usr/bin/zsh
 
