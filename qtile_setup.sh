@@ -9,3 +9,5 @@ chsh -s /usr/bin/zsh
 sudo systemctl enable ly
 sudo systemctl enable udisks2
 sudo systemctl enable bluetooth.service
+
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
