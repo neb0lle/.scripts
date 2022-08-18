@@ -35,7 +35,9 @@ case $chosen in
         systemctl hibernate
         ;;
     $logout)
-        qtile cmd-obj -o cmd -f shutdown
+		xdotool key Super_L+Alt_L+q
+		# $HOME/.config/bspwm/bspwm_quit
+        # qtile cmd-obj -o cmd -f shutdown
         ;;
 	$game)
 		if [ -z $(pidof picom) ]
