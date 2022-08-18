@@ -25,7 +25,7 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-		~/.scripts/lockscreen
+		$HOME/.scripts/lockscreen
         ;;
     $suspend)
         # amixer set Master mute
