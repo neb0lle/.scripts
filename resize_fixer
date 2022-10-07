@@ -1,2 +1,3 @@
 #!/bin/zsh
 $1
+# stil dependancy for qtile
