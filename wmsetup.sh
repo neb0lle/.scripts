@@ -11,3 +11,6 @@ sudo systemctl enable udisks2
 sudo systemctl enable bluetooth.service
 
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
+sudo cp ~/.config/misc_configs/etc/X11/xorg.conf.d/00-keyboard.conf /etc/xorg.conf.d/
+sudo cp ~/.config/misc_configs/etc/X11/xorg.conf.d/30-touchpad.conf /etc/xorg.conf.d/
