@@ -14,6 +14,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl enable zerotier-one.service
 sudo systemctl enable ufw.service
 sudo systemctl enable sshd
+sudo systemctl enable systemd-timesyncd.service
 
 sudo systemctl start zerotier-one.service
 sudo zerotier-cli join 17d709436c897371
