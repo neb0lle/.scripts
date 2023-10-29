@@ -12,9 +12,11 @@ suspend="suspend"
 hibernate="hibernate"
 logout="logout"
 game="game"
+caffeine="caffeine"
 
 # variable passed to rofi
 options="$lock\n$logout\n$shutdown\n$suspend\n$hibernate\n$reboot\n$game"
+# options="$lock\n$logout\n$shutdown\n$suspend\n$hibernate\n$reboot\n$game\n$caffeine"
 
 chosen="$(echo -e "$options" | $rofi_command -p "神  $uptime:" -dmenu)"
 case $chosen in
@@ -49,6 +51,16 @@ case $chosen in
 			nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = Off }" &
 			killall picom &
 			dunstify 'game mode on'
+		fi
+        ;;
+	$caffeine)
+		if [ $(xset q | grep timeout | sed 's@^[^0-9]*\([0-9]\+\).*@\1@') -eq "0" ]
+		then
+			xset s 600
+			dunstify 'caffeine off'
+		else
+			xset s 10000000
+			dunstify 'caffeine on'
 		fi
         ;;
 esac
