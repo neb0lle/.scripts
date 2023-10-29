@@ -1,0 +1,3 @@
+#!/bin/bash
+
+w3m -post - http://192.168.254.1:8090/login.xml <<<'mode=191&username=VPN&password=VPN&a=0'
