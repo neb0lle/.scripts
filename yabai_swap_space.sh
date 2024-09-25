@@ -1,7 +1,8 @@
 #!/bin/bash
-current_display=$(yabai -m query --spaces --space | jq '.display')
-if [ "$current_display" -eq 1 ]; then
-	yabai -m space --display 2
-else
-	yabai -m space --display 1
+
+space_ids=$(yabai -m query --spaces | jq -r '.[] | select(."is-visible" == true) | .index')
+IFS=$'\n' read -d '' -r -a space_array < <(echo "$space_ids" && printf '\0')
+
+if [ "${#space_array[@]}" -eq 2 ]; then
+	yabai -m space "${space_array[0]}" --swap "${space_array[1]}"
 fi
